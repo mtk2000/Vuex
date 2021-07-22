@@ -16,7 +16,7 @@ export default {
     return {};
   },
   computed: {
-    // ...mapState(['count'])
+    ...mapState(['count']),
     ...mapGetters(['showNum'])
   },
   methods: {
