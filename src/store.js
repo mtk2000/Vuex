@@ -35,6 +35,16 @@ export default new Vuex.Store({
       setTimeout(() => {
         context.commit('addN', step);
       }, 3000);
+    },
+    asyncSub(context) {
+      setTimeout(() => {
+        context.commit('sub');
+      }, 3000);
+    }
+  },
+  getters: {
+    showNum(state) {
+      return `当前最新的count值：${state.count}`;
     }
   }
 });

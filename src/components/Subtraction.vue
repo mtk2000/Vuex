@@ -1,28 +1,29 @@
 <template>
   <div>
-    <h3>当前最新的count值：{{ count }}</h3>
+    <h3>{{ showNum }}</h3>
     <button @click="sub">-1</button>
-    <button @click="handleSubN">-N</button>
+    <button @click="subN(3)">-N</button>
     <button @click="subN(10)">-10</button>
+    <button @click="asyncSub">3秒钟后-1（异步）</button>
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 
 export default {
   data() {
     return {};
   },
   computed: {
-    ...mapState(['count'])
+    // ...mapState(['count'])
+    ...mapGetters(['showNum'])
   },
   methods: {
     // 将需要的 mutations 函数，映射为当前组件的 method 方法
     ...mapMutations(['sub', 'subN']),
-    handleSubN() {
-      this.subN(3);
-    }
+
+    ...mapActions(['asyncSub'])
   }
 };
 </script>

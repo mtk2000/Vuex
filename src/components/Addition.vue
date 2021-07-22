@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>当前最新的count值：{{ $store.state.count }}</h3>
+    <h3>{{ $store.getters.showNum }}</h3>
     <button @click="handleAdd">+1</button>
     <button @click="handleAddN">+N</button>
     <button @click="handleAsyncAdd">3秒钟后加1（异步）</button>
