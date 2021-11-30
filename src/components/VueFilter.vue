@@ -47,7 +47,7 @@ export default {
     // 局部过滤器A：屏蔽手机号码中间4位数
     filterA: function (value) {
       if (!value) return '';
-      return value.substring(0, 3) + '****' + value.substring(7, 4);
+      return value.substring(0, 3) + '****' + value.substring(7);
     },
 
     // 局部过滤器B：校验手机号码是否12开头，否就合法
