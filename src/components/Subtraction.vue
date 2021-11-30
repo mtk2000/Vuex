@@ -1,9 +1,8 @@
 <template>
   <div>
     <h3>{{ showNum }}</h3>
-    <button @click="sub">-1</button>
-    <button @click="subN(3)">-N</button>
-    <button @click="subN(10)">-10</button>
+    <button @click="sub">马上-1（同步）</button>
+    <button @click="subN(3)">马上-3（同步）</button>
     <button @click="asyncSub">3秒钟后-1（异步）</button>
   </div>
 </template>

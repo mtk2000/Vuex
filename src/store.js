@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: { count: 0 },
+  state: { count: 0, name: 'join' },
   mutations: {
     // 只有 mutations 中定义的函数，才有权限修改 state 中的数据
     add(state) {

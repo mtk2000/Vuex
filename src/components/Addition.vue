@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>{{ $store.getters.showNum }}</h3>
-    <button @click="handleAdd">+1</button>
-    <button @click="handleAddN">+N</button>
+    <button @click="handleAdd">马上+1（同步）</button>
+    <button @click="handleAddN">马上+N（同步）</button>
     <button @click="handleAsyncAdd">3秒钟后加1（异步）</button>
     <button @click="handleAsyncAddFive">3秒钟后加5（异步）</button>
   </div>
